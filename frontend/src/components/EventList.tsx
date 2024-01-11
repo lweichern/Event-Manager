@@ -21,7 +21,10 @@ function EventList() {
   }, []);
 
   const eventList = events.filter((event) => {
-    return event.name.toLowerCase().includes(eventName.toLowerCase());
+    return (
+      event.name.toLowerCase().includes(eventName.toLowerCase()) ||
+      event.description?.toLowerCase().includes(eventName.toLowerCase())
+    );
   });
 
   return (
