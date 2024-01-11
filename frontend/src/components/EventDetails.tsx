@@ -5,6 +5,7 @@ import { EventType } from "./EventList";
 import TaskList from "./TaskList";
 import TaskForm from "./TaskForm";
 import { ArrowLeft } from "lucide-react";
+import { motion } from "framer-motion";
 
 function EventDetails() {
   const { eventId } = useParams();
@@ -31,11 +32,19 @@ function EventDetails() {
         <div className="flex flex-col gap-6">
           <div className="flex items-center w-full justify-between">
             <a href="/">
-              <ArrowLeft className="text-white" />
+              <ArrowLeft className="text-orange-600 font-bold" />
             </a>
-            <h1 className="text-3xl font-semibold justify-self-center text-white">
-              {event.name}
-            </h1>
+            <div>
+              <motion.h1
+                className="text-3xl font-semibold justify-self-center text-white"
+                layoutId={event.name}
+              >
+                {event.name}
+              </motion.h1>
+              <motion.p className="text-slate-300" layoutId={event.description}>
+                {event.description}
+              </motion.p>
+            </div>
             <div></div>
           </div>
           <TaskForm />

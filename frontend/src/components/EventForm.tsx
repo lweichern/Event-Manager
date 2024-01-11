@@ -30,12 +30,10 @@ function EventForm() {
     <form onSubmit={handleSubmit} className="flex">
       <Input
         type="text"
-        placeholder="Enter event name..."
+        placeholder="Search event details..."
         value={inputVal}
         onChange={(e) => handleChange(e)}
       />
-
-      <Button type="submit">Add</Button>
     </form>
   );
 }

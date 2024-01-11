@@ -27,7 +27,7 @@ function TaskList() {
   return (
     <div className="flex flex-col gap-3">
       {tasks.length == 0 ? (
-        <p>No tasks created yet...</p>
+        <p className="text-white">No tasks created yet...</p>
       ) : (
         taskList.map((task) => <Task task={task} key={task.id} />)
       )}

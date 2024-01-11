@@ -8,6 +8,7 @@ export type EventType = {
   name: string;
   tasksNotDone: number;
   tasks: TaskType[];
+  description: string;
 };
 
 function EventList() {

@@ -6,6 +6,7 @@ class Events(models.Model):
     created_by = models.CharField(max_length=255)
     created_date = models.DateTimeField(auto_now_add=True) # get current date when the model is added, updating it won't change this values
     updated_date = models.DateTimeField(auto_now=True)
+    description = models.CharField(max_length=255, null=True)
     tasksNotDone = models.PositiveIntegerField()
 
 class Tasks(models.Model):

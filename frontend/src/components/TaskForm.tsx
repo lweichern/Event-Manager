@@ -28,7 +28,7 @@ function TaskForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex">
+    <form onSubmit={handleSubmit} className="flex gap-2">
       <Input
         type="text"
         placeholder="Enter task name..."
@@ -36,7 +36,9 @@ function TaskForm() {
         onChange={(e) => handleChange(e)}
       />
 
-      <Button type="submit">Add</Button>
+      <Button type="submit" className="bg-orange-600">
+        Add
+      </Button>
     </form>
   );
 }
